@@ -1,0 +1,6 @@
+<view class="theme-loading-wrap">
+  <view class="theme-loading-loading">
+    <view class="loading" />
+  </view>
+  <text class="message-text" wx:if="{{message}}">{{message}}</text>
+</view>

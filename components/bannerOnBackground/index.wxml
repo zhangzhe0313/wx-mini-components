@@ -1,0 +1,22 @@
+<!--components/bannerOnBackground/index.wxml-->
+<view 
+  class="bannerbackground" 
+  style="{{ bannerBackgroundStyle }}">
+  <image 
+    class="groundimg" 
+    style="{{ groundImgStyle }}"
+    src="{{ backgroundImg }}"></image>
+  <view class="swiperwrap" style="{{ swiperWrapStyle }}">
+    <text class="bannertitle">{{ bannerTitle }}</text>
+    <swiper class="bannerswiper">
+      <block wx:for="{{ banners }}" wx:key="index">
+        <swiper-item>
+          <image 
+            class="bannerimage" 
+            style="{{ bannerImgStyle }}"
+            src="{{ item.bannerImgPath }}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>

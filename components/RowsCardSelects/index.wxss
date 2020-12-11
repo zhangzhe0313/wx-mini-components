@@ -1,0 +1,32 @@
+/* components/ColumnsCardSelects/index.wxss */
+.rowscard {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: var(--blue-border-color);
+  box-shadow: 0 6rpx 12rpx 0 rgba(233, 233, 233, 0.50);
+  border-radius: 8rpx;
+}
+
+.rowscard .carditem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 38rpx 0 44rpx 0;
+  flex-shrink: 0;
+}
+
+.carditem .itemimg {
+  width: 72rpx;
+  height: 72rpx;
+}
+
+.carditem .itemtext {
+  margin-top: 10rpx;
+}
+
+.itemtext .main {
+  font-size: 13px;
+  color: var(--n700);
+}

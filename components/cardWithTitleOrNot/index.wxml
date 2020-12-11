@@ -1,0 +1,26 @@
+<!--components/cardWithTitleOrNot/index.wxml-->
+<view 
+  class="cardwithtitleornot" 
+  style="{{ cardWrapStyle }}">
+  <view 
+    class="title" 
+    style="{{ cardTitleStyle }}">
+      <text 
+        class="main" 
+        style="{{ cardTitleMainStyle }}">{{ mainTitle }}</text>
+      
+      <view wx:if="{{ withRight }}" class="otherview" style="{{ otherViewStyle }}" bindtap="handleTap">
+        <text 
+          wx:if="{{ otherTitle != '' }}" 
+          class="sub"  
+          style="{{ cardTitleSubStyle }}">{{ otherTitle }}</text>
+        <image 
+          wx:if="{{ otherTitleImg && otherTitleImg != '' }}"
+          style="{{ cardTitleImgStyle }}"
+          class="othertitleimg" src="{{ otherTitleImg }}"></image>
+      </view>
+  </view>
+  <view class="card" style="{{ cardSlotStyle }}">
+    <slot></slot>
+  </view>
+</view>

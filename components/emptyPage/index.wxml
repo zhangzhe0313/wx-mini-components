@@ -1,0 +1,4 @@
+<view class="prompt">
+  <image class="prompt-pic" src="../../assets/img/empty.png" mode="widthFix"></image>
+  <text class="prompt-text">{{ content }}</text>
+</view>

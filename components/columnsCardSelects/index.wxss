@@ -1,0 +1,47 @@
+/* components/columnsCardSelects/index.wxss */
+.colomnscard {
+  position: relative;
+  width: 100%;
+  background: var(--blue-border-color);
+  box-shadow: 0 0 12rpx 0 rgba(233, 233, 233, 0.50);
+  border-radius: 8rpx;
+}
+
+.colomnscard .carditem {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 50rpx;
+}
+
+.colomnscard .carditem:not(:last-of-type) {
+  box-shadow: 0 2rpx 0 0 var(--n10);
+}
+
+.carditem .itemimg  {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.carditem .itemright {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 12rpx;
+}
+
+.itemright .rightleft {
+  flex: 1;
+}
+
+.rightleft .main {
+  font-size: 15px;
+  color: var(--g400);
+}
+
+.rightleft .sub {}
+
+.itemright .rightimg {
+  width: 30rpx;
+  height: 30rpx;
+}

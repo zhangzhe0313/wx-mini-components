@@ -1,0 +1,45 @@
+<!--components/layout/index.wxml-->
+<view class="layout">
+  <view class="nav" style="{{ statusNavStyle }}">
+    <view 
+      class="mobile-status" 
+      style="height:{{ mobileStatusHeight }}px;{{ statusStyle }}"></view>
+    <view 
+      class="mobile-navbar"
+      style="height:{{ mobileNavHeight }}px;{{ navBarStyle }}">
+      <view class="navbar">
+        <view 
+          bindtap="handleTap"
+          class="backwrap"
+          style="width:{{ isIosSystem ? menusInfos.width : '200' }}px;height:{{ menusInfos.height }}px;margin-left:{{ menusInfos.marginRight}}px;">
+          <block wx:if="{{ !isHideBack }}">
+            <image wx:if="{{ !isHideBackIcon }}" class="backarrow {{ backArrowStyle }}" src="{{ backImg }}" />
+            <text 
+              wx:if="{{ isIosSystem ? backTitle : layoutTitle }}" 
+              style="{{ backTitleStyle }}"
+              class="backtitle">{{ isIosSystem ? backTitle : layoutTitle }}</text>
+          </block>
+          <block wx:if="{{ isHideBack && !isIosSystem }}">
+            <text 
+              style="{{ backTitleStyle }}"
+              class="backtitle">{{ layoutTitle }}</text>
+          </block>
+        </view>
+        <view 
+          wx:if="{{ isIosSystem }}"
+          class="centerwrap"
+          style="flex: 1;width:{{ menusInfos.width }}px;height:{{ menusInfos.height }}px;{{ layoutTitleStyle }}">
+          <text class="layoutitle">{{ layoutTitle }}</text>
+        </view>
+        <view 
+          class="rightwrap"
+          style="width:{{ menusInfos.width }}px;height:{{ menusInfos.height }}px;margin-right:{{ menusInfos.marginRight}}px;"></view>
+      </view>
+    </view>  
+  </view>
+  <view 
+    class="main"
+    style="height: {{ mainHeight }}px;{{slotStyle}}">
+    <slot></slot>
+  </view>
+</view>

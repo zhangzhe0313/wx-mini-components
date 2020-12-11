@@ -1,0 +1,65 @@
+<!--pages/newReminder/inputPicker/index.wxml-->
+<view class="inputpicker">
+  <view class="container">
+    <view class="inputpicker-mark">
+      <view class="mark-content">
+        <view class="content-btns">
+          <view class="btns cancel" catchtap="handleCancelOpt">取消</view>
+          <view class="btns sure" catchtap="handleSureOpt">确认</view>
+        </view>
+
+        <view wx:if="{{ selectTabs.length > 1 }}" class="content-results">
+          <view class="results">
+            <block wx:for="{{ optOriginData }}" wx:key="index">
+
+              <block wx:if="{{ item.type == 'input' }}">
+                <view class="results-items">
+                  <view class="results-items-inner">
+                    <label>{{ item.name }}</label>
+                    <input 
+                      data-id="{{ item.id }}"
+                      type="number" 
+                      value="{{ item.selected.value }}" 
+                      bindinput="handleInputChange"/>
+                  </view>
+                </view>
+              </block>
+
+              <block wx:if="{{ item.type == 'select' }}">
+                <view 
+                  data-id="{{ item.id }}"
+                  data-index="{{ index }}"
+                  class="results-items {{ index == activeTab ? 'actived' : '' }}"
+                  catchtap="changeTab">
+                  <view class="results-items-inner">
+                    <label class="{{ index == activeTab ? 'actived-color' : '' }}">{{ item.name }}</label>
+                    <text class="{{ index == activeTab ? 'actived-color' : '' }}">{{ item.selected.value == -1 ? optOriginData[index].origins[0].name : item.selected.name }}</text>
+                  </view>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+
+        <view class="content-wraps">
+          <view class="wraps-infos">
+            <picker-view 
+              value="{{ pickerValue }}"
+              data-infos="{{ optOriginData[activeTab] }}"
+              class="pickerview-wrap"
+              indicator-class="pickerview-indicator"
+              bindpickend="handleBindpickend"
+              bindchange="handleBindpickChange">
+              <picker-view-column>
+                <view 
+                  class="picker-view-column-view" 
+                  wx:for="{{ optOriginData[activeTab].origins }}" 
+                  wx:key="index">{{ item.name }}</view>
+              </picker-view-column>
+            </picker-view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

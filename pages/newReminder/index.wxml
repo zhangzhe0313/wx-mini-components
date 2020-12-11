@@ -1,0 +1,104 @@
+<!--pages/newReminder/index.wxml-->
+<view class="new-reminder">
+  <view class="container">
+    <view class="tip-wrap">
+      <image src="../../assets/img/common/worning.png" />
+      <text>若是录入信息有误，请手动进行编辑。</text>
+    </view>
+
+    <view class="main">
+      <view class="cardwrap">
+        <view class="cardwrap-item">
+          <text class="item-lable">药品名称</text>
+          <view class="item-content">
+            <input type="text" name="" id="" placeholder="请输入药品名称" placeholder-class="input-placeholder" />
+          </view>
+        </view>
+      </view>
+
+      <view class="cardwrap">
+        <view class="cardwrap-items-one">
+          <view class="items-one-grid">
+            <text>用药频次</text>
+            <view 
+              class="items-one-grid-wraps"
+              bindtap="handleZQPC">
+              <view class="inputicker-placeholder">频次<text>{{ pinCi }}</text></view> 
+
+              <InputPicker
+                wx:if="{{ ShowZQPC }}"
+                originData="{{ ZQPCoriginData }}"
+                bind:pickerHideEvent="handleClosePicker"
+                bind:pickerSureEvent="handlePickerResult"></InputPicker>
+            </view>
+          </view>
+        </view>
+
+        <view class="cardwrap-items-one">
+          <view class="items-one-grid">
+            <text>用法用量</text>
+            <view 
+              class="items-three-grid-wraps" 
+              bindtap="handleWeeklyTimes">
+              <view class="inputicker-placeholder">用法<text>{{ yongFaYongLiang.yongFa }}</text></view> 
+              <view class="inputicker-placeholder">用量<text>{{ yongFaYongLiang.yongLiang }}</text></view> 
+              <view class="inputicker-placeholder">单位<text>{{ yongFaYongLiang.danWei }}</text></view> 
+
+              <InputPicker
+                wx:if="{{ ShowWeeklyTimes }}"
+                originData="{{ originData }}"
+                bind:pickerHideEvent="handleClosePicker"
+                bind:pickerSureEvent="handlePickerResult"></InputPicker>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="cardwrap">
+        <view class="cardwrap-item">
+          <text class="item-lable">提醒时间</text>
+          <view class="item-content">
+            <view class="item-add">
+              <view class="item-times">
+                <view class="item-time">--:--</view>
+              </view>
+              <image src="../../assets/img/common/new.svg" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="cardwrap">
+        <view class="cardwrap-items-one">
+          <view class="items-one-grid">
+            <text>起止时间</text>
+            <view class="items-one-grid-wraps">
+              <picker 
+                mode="date" 
+                value="{{ startDate }}" 
+                start="{{ startMinDate }}" 
+                end="2999-01-01" 
+                bindchange="bindStartDateChange">
+                <view class="input-placeholder">
+                  {{ startDate ? startDate : '开始时间' }}
+                </view>
+              </picker>
+              <text>至</text>
+              <picker 
+                mode="date" 
+                value="{{ endDate }}" 
+                start="{{ endMinDate }}" 
+                end="2999-01-01" 
+                bindchange="bindDateChange">
+                <view class="input-placeholder">
+                  {{ endDate ? endDate : '结束时间' }}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+/* components/quikEnter/index.wxss */
+.quikenter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40rpx;
+  width: 100%;
+  height: 114rpx;
+  border-radius: 12rpx;
+  background-color: var(--blue-border-color);
+  box-shadow: 0 0 8rpx 0 var(--w19);
+}
+
+.quikenter .leftimg {
+  width: 134rpx;
+  height: 114rpx;
+}
+
+.quikenter .middle {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.middle .main {
+  display: flex;
+  align-items: center;
+}
+
+.main .maincontent {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--g400);
+}
+
+.main .maindesc {
+  margin-left: 20rpx;
+  font-size: 14px;
+  color: var(--g400);
+}
+
+.maindesc text:not(:last-of-type) {
+  margin-right: 10rpx;
+}
+
+.middle .sub {
+  font-size: 13px;
+  color: var(--n700);
+}
+
+.quikenter .right {
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+  height: 100%;
+}
+
+.right .rightimg {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.right .rightcontent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 160rpx;
+  height: 100%;
+}

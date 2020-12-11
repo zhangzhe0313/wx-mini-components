@@ -1,0 +1,44 @@
+<!--components/quikEnter/index.wxml-->
+<view 
+  data-id="{{ itemId }}"
+  class="quikenter" 
+  style="{{ quikEnterStyle }}" 
+  bindtap="handletap">
+  <block wx:if="{{ leftImg !== '' }}">
+    <image 
+      class="leftimg" 
+      style="{{ leftImgStyle }}"
+      src="{{ leftImg }}"></image>
+  </block>
+  <view class="middle" style="{{ middleStyle }}">
+    <view 
+      wx:if="{{ middleMainContent !== '' }}"
+      class="main" 
+      style="{{ mainStyle }}">
+      <text class="maincontent" style="{{ mainContentStyle }}">{{ middleMainContent }}</text>
+      <view wx:if="{{ hasMainDesc }}" class="maindesc" style="{{ mainDescStyle }}">
+        <text style="{{ mainDescPreStyle }}">{{ mainDescPre }}</text>
+        <text style="{{ mainDescAftStyle }}">{{ mainDescAft }}</text>
+      </view>
+    </view>
+    <text 
+      wx:if="{{ middleSubContent !== '' }}"
+      class="sub" 
+      style="{{ subStyle }}">{{ middleSubContent }}</text>
+  </view>
+  <view wx:if="{{ hasRight }}" class="right" style="{{ rightStyle }}">
+    <block wx:if="{{ rightImg !== '' }}">
+      <image 
+        data-id="{{ itemId }}"
+        class="rightimg" 
+        style="{{ rightImgStyle }}" 
+        src="{{ rightImg }}"
+        catchtap="handleImgClickEvent"></image>
+    </block>
+    <block wx:else>
+      <text 
+        class="rightcontent" 
+        style="{{ rightContentStyle }}">{{ rightContent }}</text>
+    </block>
+  </view>
+</view>

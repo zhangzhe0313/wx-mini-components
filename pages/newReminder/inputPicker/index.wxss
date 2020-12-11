@@ -1,0 +1,205 @@
+/* pages/newReminder/inputPicker/index.wxss */
+.inputpicker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.inputpicker .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container .inputpicker-mark {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.inputpicker-mark .mark-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 700rpx;
+  width: 100%;
+  background-color: #fff;
+  animation: inputpickerHeight 0.2s ease-in-out;
+}
+
+@keyframes inputpickerHeight {
+  from {
+    height: 0; 
+  }
+  to { 
+    height: 700rpx; 
+  }
+}
+
+.mark-content .content-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  box-shadow: 0 2rpx 0 0 var(--n10);
+}
+
+.content-tabs input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  /* box-shadow: 0 2rpx 0 0 var(--n10); */
+  text-align: center;
+}
+
+.content-tabs view {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-btns {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60rpx;
+}
+
+.mark-content .content-results {
+  padding: 20rpx 20rpx 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+
+.content-results .results {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.results input {
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 2rpx 0 0 var(--g400);
+}
+
+.results view {
+  height: 100%;
+}
+
+.content-btns .btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160rpx;
+  height: 100%;
+}
+
+.content-btns .cancel {
+  color: var(--f400);
+}
+
+.content-btns .sure {
+  color: #3f9fff;
+}
+
+.mark-content .content-wraps {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100% - 160rpx);
+  box-shadow: 0 -2rpx 0 0 var(--n100);
+}
+
+.content-wraps .wraps-tabs {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2rpx 0 0 0 var(--n100);
+}
+
+.wraps-tabs .tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--g400);
+  box-shadow: 2rpx 0 0 0 var(-n150);
+}
+
+.results .actived{
+  box-shadow: inset 0 -4rpx 0 0 #3f9fff;
+  color: #3f9fff;
+}
+
+.actived-color {
+  color: #3f9fff !important;
+}
+
+.inputpicker-placeholder {
+  font-size: 12px;
+  color: var(--n700);
+}
+
+.content-wraps .wraps-infos {
+  position: relative;
+}
+
+.wraps-infos .pickerview-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wraps-infos .pickerview-indicator {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: var(--g400);
+}
+
+.picker-view-column-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results .results-items {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.results .results-items:not(:last-of-type) {
+  margin-right: 20rpx;
+}
+
+.results-items .results-items-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.results-items-inner label {
+  font-size: 13px;
+  color: var(--n700);
+}
+
+.results-items-inner text {
+  padding-left: 10rpx;
+  font-size: 14px;
+  color: var(--g400);
+}

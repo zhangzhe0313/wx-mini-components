@@ -1,0 +1,12 @@
+<!--components/dottedDevice/index.wxml-->
+<view class="device">
+  <!-- <view class="left">
+    <view class="cover"></view>
+    <view class="dotted"></view>
+  </view> -->
+  <view class="line"></view>
+  <!-- <view class="right">
+    <view class="dotted"></view>
+    <view class="cover"></view>
+  </view> -->
+</view>

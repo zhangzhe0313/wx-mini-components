@@ -1,0 +1,26 @@
+<!--components/columnsCardSelects/index.wxml-->
+<view class="colomnscard" style="{{ colomnsCardStyle }}">
+  <block wx:for="{{ columnsCardList }}" wx:key="index">
+    <view 
+      data-id="{{ item.id }}"
+      class="carditem" 
+      style="{{ cardItemStyle }}"
+      bindtap="handleTap">
+      <image 
+        class="itemimg" 
+        style="{{ cardItemImgStyle }}"
+        src="{{ item.img }}"></image>
+      <view class="itemright">
+        <view class="rightleft" style="{{ rightLeftStyle }}">
+          <text class="main" style="{{ rightMainStyle }}">{{ item.main }}</text>
+          <text class="sub" style="{{ rightSubStyle }}">{{ item.desc }}</text>
+        </view>
+        <image 
+          wx:if="{{ rightimg != '' }}" 
+          class="rightimg" 
+          style="{{ rightImgStyle }}"
+          src="{{ item.rightImg }}"></image>
+      </view>
+    </view>
+  </block>
+</view>

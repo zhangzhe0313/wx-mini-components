@@ -1,0 +1,30 @@
+<!--components/simpleDescList/index.wxml-->
+<view class="simpledesclist" style="{{ simpleDescListStyle }}">
+  <scroll-view 
+    scroll-x="{{ isScrollX }}" 
+    scroll-y="{{ isScrollY }}">
+    <view 
+      class="scrollview" 
+      style="{{ scrollviewStyle }}"
+      wx:if="{{ isScrollX }}" >
+      <block wx:if="{{ doctorList.length === 0 }}">
+        <image 
+          class="loading" 
+          src="../../assets/img/home/data_loading.png"></image>
+      </block>
+      <block wx:if="{{ doctorList.length > 0 }}" wx:for="{{ doctorList }}" wx:key="index">
+        <view bindtap="doctorItemClick" data-doctorId="{{item.doctorId}}" class="wrap" style="{{ wrapStyle }}">
+          <image 
+            class="avatar" 
+            style="{{ wrapAvatarStyle }}"
+            src="{{ item.avatar }}"></image>
+          <view class="infos" style="{{ infosStyle }}">
+            <text class="main" style="{{ infosMainStyle }}">{{ item.realName }}</text>
+            <text class="sub" style="{{ infosSubStyle }}">{{ item.title }}</text>
+            <text class="desc" style="{{ infosDescStyle }}">{{ item.department }}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

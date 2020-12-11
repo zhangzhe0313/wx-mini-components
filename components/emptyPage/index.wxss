@@ -1,0 +1,17 @@
+.prompt {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt-pic {
+  width: 94px;
+}
+
+.prompt-text {
+  font-size: 14px;
+  padding: 40rpx 0;
+  color: var(--n400);
+}

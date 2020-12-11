@@ -1,0 +1,19 @@
+<view class="theme-button-wrap">
+  <button
+    size="mini"
+    class="theme-button {{ disabled ? 'isDisabled' : '' }}"
+    hover-class="theme-button-focus"
+    bindtap="handleTap"
+    bindcontact="bindcontact"
+    bindgetuserinfo="bindgetuserinfo"
+    bindgetphonenumber="bindgetphonenumber"
+    open-type="{{ openType }}"
+  >
+    <view class="theme-button-text {{loading ? 'isLoading' : ''}}">
+      <slot></slot>
+    </view>
+    <view class="theme-button-loading" wx:if="{{loading}}">
+      <view class="loading"></view>
+    </view>
+  </button>
+</view>

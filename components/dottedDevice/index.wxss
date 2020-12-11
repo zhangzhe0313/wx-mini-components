@@ -1,0 +1,70 @@
+/* components/dottedDevice/index.wxss */
+.device {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.device .left {
+  position: absolute;
+  left: -38rpx;
+  top: -14rpx;
+}
+
+.left  .cover{
+  position: absolute;
+  left: 0;
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 20rpx;
+  background-color: var(--blue-border-color);
+  z-index: 100;
+
+}
+
+.left .dotted {
+  position: absolute;
+  left: 6rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  border: 2rpx dotted var(--n150);
+  z-index: 50;
+}
+
+.device .line {
+  position: absolute;
+  top: -5rpx;
+  left: -6rpx;
+  width: 102%;
+  height: 2rpx;
+  border-bottom: 2rpx dotted var(--n150);
+}
+
+
+.device .right {
+  position: absolute;
+  right: -38rpx;
+  top: -14rpx;
+}
+
+.right  .cover{
+  position: absolute;
+  right: 6rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  border: 2rpx dotted var(--n150);
+  z-index: 50;
+
+}
+
+.right .dotted {
+  position: absolute;
+  right: 0;
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 20rpx;
+  background-color: var(--blue-border-color);
+  z-index: 100;
+}

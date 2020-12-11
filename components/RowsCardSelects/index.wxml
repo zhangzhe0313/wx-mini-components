@@ -1,0 +1,26 @@
+<!--components/ColumnsCardSelects/index.wxml-->
+<view 
+  class="rowscard" 
+  style="{{ rowsCardStyle }}">
+  <block 
+    wx:for="{{ rowsCardList }}" 
+    wx:key="index">
+    <view 
+      data-id="{{ item.id }}"
+      class="carditem" 
+      style="{{ cardItemStyle }}"
+      bindtap="handleTap">
+      <image 
+        class="itemimg" 
+        style="{{ cardItemImgStyle }}" 
+        src="{{item.img}}"></image>
+      <view 
+        class="itemtext" 
+        style="{{ cardItemTextStyle }}">
+        <text 
+          class="main" 
+          style="{{ cardItemTextMainStyle }}">{{ item.main }}</text>
+      </view>
+    </view>
+  </block>
+</view>

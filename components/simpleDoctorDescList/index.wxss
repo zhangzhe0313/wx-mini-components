@@ -1,0 +1,87 @@
+/* components/simpleDescList/index.wxss */
+.simpledesclist {
+  position: relative;
+  width: 100%;
+}
+
+.scrollview {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollview .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+  width: 246rpx;
+  height: 320rpx;
+  background-color: var(--blue-border-color);
+  border-radius: 16rpx;
+  box-shadow: 0 0 8rpx 0 var(--w19);
+}
+
+.wrap .avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+}
+
+.wrap .infos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16rpx;
+}
+
+.infos .main {
+  max-width: 246rpx;
+  font-size: 16px;
+  color: var(--g400);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.infos .sub {
+  margin-top: 8rpx;
+  font-size: 14px;
+  color: var(--n700);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.infos .desc {
+  margin-top: 24rpx;
+  padding: 2rpx 28rpx;
+  font-size: 12px;
+  border-radius: 22rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scrollview .loading {
+  position: relative;
+  width: 100%;
+  height: 320rpx;
+}
+
+.scrollview .wrap:nth-of-type(3n-2) .infos .desc {
+  color: var(--blue-color);
+  background-color: var(--b20);
+}
+
+.scrollview .wrap:nth-of-type(3n-1) .infos .desc {
+  color: var(--c50);
+  background-color: var(--c25);
+}
+
+.scrollview .wrap:nth-of-type(3n) .infos .desc {
+  color: var(--f200);
+  background-color: var(--f50);
+}

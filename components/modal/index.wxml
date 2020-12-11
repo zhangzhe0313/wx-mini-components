@@ -1,0 +1,12 @@
+
+<!-- 弹出模态框 -->
+<view class="mymodal" wx:if="{{showModalStatus}}" >
+	<!-- 模态框title -->
+	<view class="mymodal_top">
+		<slot name="imageContent"></slot>
+	</view>
+	<!-- 模态框内容 -->
+	<view class="mymodal_content" >
+		<slot name="modalContent"></slot>
+	</view>
+</view>

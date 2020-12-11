@@ -1,0 +1,73 @@
+/* components/layout/index.wxss */
+.layout {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout .nav {
+  position: relative;
+  background-color: var(--blue-border-color);
+}
+
+.nav .mobile-status {
+  width: 100%;
+}
+
+.nav .mobile-navbar {
+  width: 100%;
+}
+
+.mobile-navbar .navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .backwrap {
+  display: flex;
+  align-items: center;
+}
+
+.backwrap .backarrow {
+  margin-left: 8rpx;
+  width: 11%;
+  height: 62%;
+}
+
+.backwrap .backtitle {
+  margin-left: 10rpx;
+  padding: 0 20rpx;
+  font-size: 16px;
+  color: var(--text-color);
+} 
+
+.navbar .centerwrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rpx;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.centerwrap .layoutitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.navbar .rightwrap {
+}
+
+.layout .main {
+  position: relative;
+  margin-bottom: 10rpx;
+  width: 100%;
+  overflow: scroll;
+}

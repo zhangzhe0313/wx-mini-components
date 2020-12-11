@@ -1,0 +1,40 @@
+/* components/bannerOnBackground/index.wxss */
+.bannerbackground {
+  position: relative;
+  width: 100%;
+  height: 512rpx;
+}
+
+.bannerbackground .groundimg {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.bannerbackground .swiperwrap {
+  position: absolute;
+  left: 34rpx;
+  right: 34rpx;
+  margin: 0 auto;
+  bottom: 0;
+  z-index: 20;
+}
+
+.swiperwrap .bannertitle {
+  position: absolute;
+  top: -88rpx;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--blue-border-color);
+}
+
+.swiperwrap .bannerswiper {
+
+}
+
+.bannerimage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
